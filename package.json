@@ -5,6 +5,7 @@
     "dev": "concurrently \"yarn dev:next\" \"yarn dev:remix\"",
     "dev:watch": "npm-watch",
     "add-line": "gsed -i \"1i global.navigator = {};\" './build/index.js'",
+    "remove-line": "sed -i -e '/navigator\\.language/d' build/index.js",
     "build:next": "next build",
     "build:remix": "remix build && yarn add-line",
     "start": "next start",
